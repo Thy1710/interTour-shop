@@ -1,0 +1,54 @@
+<body>
+    <div class="container mt-2">
+        <div class="row ">
+            <div class="col-md-9">
+                <h2>Giỏ Hàng Của Bạn</h2>
+                <table class="table table-responsive table-bodered table-hover text-center align-middle">
+                    <thead>
+                        <tr class="table-success">
+                            <th>Thông Tin Dịch Vụ</th>
+                            <th></th>
+                            <th>Số Lượng</th>
+                            <th>Chi Phí</th>
+                            <th>Xóa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let p of cart">
+                            <td><img src="../assets/img/product/{{p.img}}.jpg" alt="" height="120px" width="150px"></td>
+                            <td>{{p.name}}</td>
+                            <td><input type="number" class="form-control" [(ngModel)]="p.quantity" min="1"></td>
+                            <td>{{p.price | number}}</td>
+                            <td><i class=" ms-2 bi bi-x-square-fill" (click)="deleteCart(p.id)"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-3">
+                <div class="col-md-12">
+                    <div class="card ">
+                        <div class="card-header">
+                            <h5 class="card-title">Thêm Mã Giảm Giá</h5>
+                        </div>
+                        <div class="card-body d-flex">
+                            <input type="text" class="container-fluid border-0 bg-body-secondary p-2 rounded" placeholder="Input Code">
+                            <button type="submit" class="bg-custom text-white ms-1 border-0 p-2 rounded">Thêm</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mt-2">
+                    <div class="card ">
+                        <div class="card-header">
+                            <h5 class="card-title">Tóm Tắt Giỏ Hàng</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Tổng số lượng: {{productService.getCartLength()}}</p>
+                            <p class="card-text">Tổng giá trị: {{sumMoney() | number}}</p>
+                            <a [routerLink]="['/pay']"><button type="submit" class="bg-custom text-white ms-1 border-0 p-2 rounded">Thanh Toán</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

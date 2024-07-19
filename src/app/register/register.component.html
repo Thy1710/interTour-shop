@@ -1,0 +1,72 @@
+<body>
+    <div class="container mt-5">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Trang Chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Đăng Nhập</li>
+            </ol>
+        </nav>
+        <div class="text-center">
+            <div><img src="./assets/img/logo/logo.png" width="300px" height="100px"></div>
+            <p>---------</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-5 mb-3 border rounded">
+                <form (ngSubmit)="onSubmit()" class="p-2">
+                    <h3 class="text-center mb-4 text-dark">ĐĂNG KÝ</h3>
+                    <div class="mb-3">
+                        <label class="form-label">Tên đăng nhập</label>
+                        <input class="form-control" type="text" name="username" [(ngModel)]="username" required>
+                        <div *ngIf="username === ''">
+                            <small class="text-danger">Tên đăng nhập không được để trống</small>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Địa chỉ email</label>
+                        <input class="form-control " type="email" name="email" [(ngModel)]="email" required email>
+                        <div *ngIf="email === ''">
+                            <small class="text-danger">Email không được để trống</small>
+                        </div>
+                        <div *ngIf="email !=='' && ! isEmailValid(email)">
+                            <small class="text-danger">Email không hợp lệ</small>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Mật khẩu</label>
+                        <input class="form-control " type="password" name="password" [(ngModel)]="password" required>
+                        <div *ngIf="password === ''">
+                            <small class="text-danger">Mật khẩu không được để trống</small>
+                        </div>
+                        <div *ngIf="password !=='' && ! isPasswordValid(password)">
+                            <small class="text-danger">Mật khẩu phải có 8 ký tự, chữ hoa, chữ thương, và có số</small>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Nhập lại mật khẩu</label>
+                        <input class="form-control" type="password" name="repassword" [(ngModel)]="repassword" required>
+                        <div *ngIf="repassword ===''">
+                            <small class="text-danger">Nhập lại mật khẩu không được để trống</small>
+                        </div>
+                        <div *ngIf="repassword !== '' && repassword !== password">
+                            <small class="text-danger">Nhập lại mật khẩu không khớp</small>
+                        </div>
+                    </div>
+                    <div class="mb-1">
+                        <input class="form-check-input me-1" type="checkbox" [(ngModel)]="remember_check" name="remember_check" value="1" id="remember_check">
+                        <label class="form-check-label" for="remember_check">Đồng ý điều khoản</label>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" *ngIf="remember_check == 1" class="btn btn-primary container-fluid rounded pt-3 pb-3">Đăng
+                            ký</button>
+                        <button type="submit" *ngIf="remember_check !=1" class="btn btn-secondary container-fluid rounded pt-3 pb-3"
+                            disabled>Đăng
+                            ký</button>
+                    </div>
+                    <div class="text-center mt-2">
+                        <label for="">Bạn đã có tài khoản ? <a [routerLink]="['/login']">Đăng nhập</a></label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

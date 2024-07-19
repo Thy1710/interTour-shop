@@ -1,0 +1,267 @@
+
+<body>
+    <div class="container">
+        
+        <!-- <div class="row text-center">
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner bg-body-secondary">
+                  <div class="carousel-item active">
+                    <img src="./assets/img/silder/silder1.webp" width="24.5%" alt="...">
+                    <img src="./assets/img/silder/silder2.jpg" width="24.5%" alt="...">
+                    <img src="./assets/img/silder/slider3.jpg" width="24.5%" alt="...">
+                    <img src="./assets/img/silder/slider4.jpg" width="24.5%" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./assets/img/silder/slider5.jpg" width="24.5%" alt="...">
+                    <img src="./assets/img/silder/silder6.jpg" width="24.5%" alt="...">
+                    <img src="./assets/img/silder/slider7.jpg" width="24.5%" alt="...">
+                    <img src="./assets/img/silder/slider8.jpg" width="24.5%" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div> -->
+        <div class="row">
+            <h4> {{productSearch.length}} kết quả tìm kiếm với từ khóa "{{keyword}}"</h4>
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-3 " *ngFor="let p of productSearch">
+                <div class="card" style="height: 410px;">
+                    <img src="./assets/img/product/{{p.img}}.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">{{p.name}}</h5>
+                        <p class="card-text">Phương tiện: {{p.vehicle}}</p>
+                        <p class="card-text"><i class="bi bi-alarm"></i> {{p.during}}</p>
+                        <div class="mt-auto d-flex justify-content-between">
+                            <h5 class="text-danger mt-1 fw-bold">{{ p.price | number }}₫</h5>
+                            <a [routerLink] = "['/detail',p.id]" class="btn btn-primary">Xem Ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="bg-info">
+        <div class="container pb-4">
+            <div class="row">
+                <h2 class="ms-3 text-center p-3 text-white">BLOG</h2>
+                <div class="col-md-6 col-sm-12 mt-2">
+                    <div class="row bg-white position-relative d-flex ">
+                        <div class="shopping-mall position-absolute sticky-md-bottom text-uppercase">
+                            <h1 class="font-impact  pb-lg-5 text-white border-bottom ">
+                                Tour mùa thu núi nikko
+                            </h1>
+                            <h5 class="text-white">Nikko, một thị trấn nằm giữa thiên nhiên tươi đẹp của Nhật Bản
+                            </h5>
+                        </div>
+                        <a href="deliproduct.html">
+                            <img src="https://hktraveljapan.jp/media/images/tour/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202023-09-13%20123027.png"
+                                alt="" class="w-100" style="height: 420px;">
+                        </a>
+                    </div>
+
+                </div>
+                <div class="col-md-6  mt-2">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="mb-4">
+                                <div class="bg-white position-relative">
+                                    <div class="shopping-mall position-absolute sticky-md-bottom text-uppercase">
+
+                                        <h6 class="text-white">KAMIKOCHI - HAKUBA luôn là điểm đến hấp dẫn với vẻ đẹp
+                                            thiên nhiên</h6>
+                                    </div>
+                                    <a href="deliproduct.html">
+                                        <img src="https://hktraveljapan.jp/media/images/tour/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202023-09-13%20120649.png"
+                                            alt="" class="w-100" style="height: 200px;">
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="col mb-4 col-sm-12">
+                                <div class="bg-white position-relative">
+                                    <div class="shopping-mall position-absolute sticky-md-bottom text-uppercase">
+
+                                        <h6 class="text-white">hãy cân nhắc đến chuyến hành trình đến Ibaraki, chỉ cách
+                                            trung tâm</h6>
+                                    </div>
+                                    <a href="deliproduct.html">
+                                        <img src="https://hktraveljapan.jp/media/images/tour/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202023-09-13%20114429.png"
+                                            alt="" class="w-100" style="height: 200px;">
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-4 col-sm-12">
+                                <div class="bg-white position-relative">
+                                    <div class="shopping-mall position-absolute sticky-md-bottom text-uppercase">
+
+                                        <h6 class="text-white">TOUR NGẮM LÁ ĐỎ PHÚ SĨ - HAKONE</h6>
+                                    </div>
+                                    <a href="deliproduct.html">
+                                        <img src="https://hktraveljapan.jp/media/images/tour/349331907_216321274200464_6242544993840540151_n.jpg"
+                                            alt="" class="w-100" style="height: 200px;">
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="mb-4 col-sm-12">
+                                <div class="bg-white position-relative">
+                                    <div class="shopping-mall position-absolute sticky-md-bottom text-uppercase">
+
+                                        <h6 class="text-white">Tham gia TOUR KHÁM PHÁ DÃY TATEYAMA - ĐẬP KUROBE</h6>
+                                    </div>
+                                    <a href="deliproduct.html">
+                                        <img src="https://hktraveljapan.jp/media/images/tour/361359274_775144951081002_5428678369386767523_n.jpg"
+                                            alt="" class="w-100" style="height: 200px;">
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-body-secondary pb-4">
+        <div class="container">
+            <div class="row text-center">
+                <h2 class="mt-5">CẢM NHẬN CỦA KHÁCH HÀNG</h2>
+                <h4>----------</h4>
+            </div>
+            <div class="row justify-content-center text-center">
+                <div class="border bg-white rounded col-md-3 col-sm-12 mt-2 ms-3 me-3">
+                    <img src="./assets/img/customer/cus-1.jpg" class="align-items-center justify-content-center rounded-circle"
+                        width="100px" height="100px" alt="...">
+                    <div class="mt-2 ms-3 me-3">
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <em>
+                            <h5 class="text-body-secondary">ANH NGUYỄN HỮU LỘC</h5>
+                        </em>
+                        <p>Quận 5, TP Hồ Chí Minh</p>
+                        <em>
+                            <p class="">"Trong chuyến đi Singapore vừa rồi, đây là tour du lịch ra nước ngoài đầu tiên
+                                của tôi, sau khi được đồng hành cùng Intertour, tôi rất hài lòng với chất lượng và dịch
+                                vụ của Quý công ty. Hướng dẫn viên đã tận tình giúp đỡ chúng tôi trong quá trình tham
+                                quan, mua sắm, tạo cho tôi sự thích thú muốn khám phá thêm nhiều ở đất nước Singapore
+                                này."</p>
+                        </em>
+                    </div>
+                </div>
+                <div class="border bg-white rounded col-md-3 col-sm-12 mt-2 ms-3 me-3">
+                    <img src="./assets/img/customer/cus-2.jpg" class="align-items-center justify-content-center rounded-circle"
+                        width="100px" height="100px" alt="...">
+                    <div class="mt-2 ms-3 me-3">
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <em>
+                            <h5 class="text-body-secondary">CHÚ HUỲNH TRUNG NHÂN</h5>
+                        </em>
+                        <p>An Giang</p>
+                        <em>
+                            <p class="">"Trong chuyến đi 6 ngày 5 đêm tại Sin Mã Indo, gia đình chúng tôi đã được trải
+                                nhiệm rất nhiều điều hay, mới mẻ và lạ lẫm so với các nước khác mà chúng tôi đã đi qua,
+                                chúng tôi rất hài lòng trong chuyến đi này. Cảm ơn Intertour đã mang lại gia đình chúng
+                                tôi một chuyến đi đầy kỷ niệm mới lạ."</p>
+                        </em>
+                    </div>
+                </div>
+                <div class="border bg-white rounded col-md-3 col-sm-12 mt-2 ms-3 me-3">
+                    <img src="./assets/img/customer/cus-3.jpg" class="align-items-center justify-content-center rounded-circle"
+                        width="100px" height="100px" alt="...">
+                    <div class="mt-2 ms-3 me-3">
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <em>
+                            <h5 class="text-body-secondary">CHỊ TRẦN NGỌC BÍCH</h5>
+                        </em>
+                        <p>Quận 5, TP Hồ Chí Minh</p>
+                        <em>
+                            <p class="">"Tôi đã được đi một chuyến du lịch tuyệt vời nhất, đã biết thêm rất nhiều điều.
+                                Kiến thức của tôi đã được nâng cao và hiểu rộng, cảm ơn Intertour đã cho tôi được trải
+                                nghiệm điều đó."</p>
+                        </em>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row text-center">
+            <h2 class="mt-2">TRẢI NGHIỆM CỦA MỌI NGƯỜI</h2>
+            <h4>----------</h4>
+        </div>
+        <div class="row">
+            <!-- Panel 1 -->
+            <div class=" col-sm-6 col-md-4 col-lg-3 mb-3">
+                <div class="card text-white ">
+                    <img class="card-img"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Singapore_Skyline_at_Bluehour.jpg/640px-Singapore_Skyline_at_Bluehour.jpg"
+                        alt="Gardens by the Bay">
+                    <div class="card-img-overlay" style="background-color: rgba(0, 123, 255, 0.6);">
+                        <h5 class="card-title">Chốt Gặp Kèo Sing - Thai</h5>
+                        <p class="card-text">Deal du lịch HOT nhất Singapore & Thái Lan</p>
+                        <a href="#" class="btn bg-custom text-white">Khám Phá</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Panel 2 -->
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-3 pb-4">
+                <div class="card text-white ">
+                    <img class="card-img"
+                        src="https://icdn.24h.com.vn/upload/1-2023/images/2023-01-13/image3-1673592085-213-width2048height1366.jpg"
+                        alt="Shopping">
+                    <div class="card-img-overlay" style="background-color: rgba(255, 165, 0, 0.6);">
+                        <h5 class="card-title">Càng Mua Càng Hời</h5>
+                        <p class="card-text">Ưu đãi hấp dẫn. Càng mua nhiều - càng lời.</p>
+                        <a href="#" class="btn bg-custom text-white">Khám Phá</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Panel 3 -->
+            <div class=" col-sm-6 col-md-4 col-lg-3 mb-3">
+                <div class="card text-white ">
+                    <img class="card-img"
+                        src="https://eurotravel.com.vn/wp-content/uploads/2023/01/cac-nuoc-chau-au-nen-di-du-lich.jpg"
+                        alt="Europe and America">
+                    <div class="card-img-overlay" style="background-color: rgba(56, 142, 60, 0.6);">
+                        <h5 class="card-title">Zone Châu Âu - Hoa Kỳ</h5>
+                        <p class="card-text">Gói ý du lịch hàng đầu Châu Âu và Hoa Kỳ.</p>
+                        <a href="#" class="btn bg-custom text-white">Khám Phá</a>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-sm-6 col-md-4 col-lg-3 mb-3">
+                <div class="card text-white ">
+                    <img class="card-img"
+                        src="https://media.istockphoto.com/id/1401126607/photo/aerial-view-of-beautiful-skyscrapers-along-the-river-at-sunset-sky.jpg?s=612x612&w=0&k=20&c=pxD5s6SKlM5k5rFilSffJOeXLxzYP3EUyw4vR2pTOxQ="
+                        alt="Europe and America">
+                    <div class="card-img-overlay" style="background-color: rgba(229, 255, 0, 0.223);">
+                        <h5 class="card-title">Hồ Chí Minh Cuối Tuần</h5>
+                        <p class="card-text">Gói ý du lịch hàng đầu Thành Phố Hồ CHí Minh.</p>
+                        <a href="#" class="btn bg-custom text-white">Khám Phá</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

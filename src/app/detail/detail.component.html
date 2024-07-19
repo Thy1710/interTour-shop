@@ -1,0 +1,220 @@
+<body>
+    <div class="container">
+        <div class="row">
+            <h2> {{productDetail?.name}}</h2>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Trang Chủ</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Chi tiết Tour</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-8 col-sm-12">
+                <img src="../assets/img/product/{{productDetail?.img}}.jpg" class="w-100" height="450px" alt="">
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button bg-body-secondary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                {{productDetail?.name}}
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show list-group"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body list-group-item">
+                                <p>Thời Điểm phát hành: {{productDetail?.start}}</p>
+                            </div>
+                            <div class="accordion-body list-group-item">
+                                <p>Thời gian: {{productDetail?.during}}</p>
+                            </div>
+                            <div class="accordion-body list-group-item">
+                                <p>Khách sạn: {{productDetail?.hotel}}</p>
+                            </div>
+                            <div class="accordion-body list-group-item">
+                                <p>Di chuyển: {{productDetail?.vehicle}}</p>
+                            </div>
+                            <div class="accordion-body list-group-item">
+                                <p>Xuất phát: {{productDetail?.departure}}</p>
+                            </div>
+                            <div class="accordion-body list-group-item d-flex">
+                                <p>Số Lượng: </p>
+                                <input type="number" class="form-control w-50 ms-2" value="1" min="1" name="quantity" #quantity>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-warning p-3 mt-3 text-white fw-bold">
+                    <h5 class="text-danger fw-bold">Giá Chỉ Từ : {{productDetail?.price | number}} <u>đ</u></h5>
+                </div>
+                <div class="mt-2">
+                    <button class="container-fluid border-0 rounded bg-custom text-white p-3" (click)="addCart(quantity.value)">
+                        <h5>Đặt Tour Ngay</h5>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-8 col-sm-12">
+                <div class="d-flex align-items-center mt-4">
+                    <img src="../assets/img/logo/logo-product.png" width="50px" height="50px" alt="">
+                    <h3 class="ms-2">Giới Thiệu Tổng Quan</h3>
+                </div>
+                <hr>
+                <p class="lh-lg"><strong>Tour Trung Quốc: Tây An - Lạc Dương - Khai Phong - Trịnh Châu 6 ngày 5
+                        đêm</strong> của Công ty du lịch Elite Tour du khách đi khám phá Tây An, thủ đô nổi tiếng của
+                    Trung Quốc với Lăng mộ của Tần Thủy Hoàng và Con đường Tơ lụa huyền thoại; ngắm nhìn vẻ đẹp lộng lẫy
+                    của hoa mẫu đơn Lạc Dương, quốc hoa của Trung Quốc; thăm Phủ Khai Phong và tìm hiểu về giai thoại
+                    nổi tiếng Bao Công ; khám phá nguồn gốc Thiếu Lâm Tự, môn phái võ thuật nổi tiếng.</p>
+                <img src="../assets/img/detail/detail-1.jpg" class="w-100" alt="">
+                <h5 class="mt-2">ĐIỂM NỔI BẬT TRONG LỊCH TRÌNH TOUR:</h5>
+                <p class="lh-lg">- Tham quan: Lăng mộ Tần Thủy Hoàng - Nơi đoàng đế Tần Thủy Hoàng yên nghỉ mà cho đến
+                    nay các nhà khảo cổ Trung Quốc chưa khám phá. <br>
+                    - Tham dự Yến Tiệc cung đình nhà Đường. <br>
+                    - Thăm quan Minh Thành Tường - khu tường thành cổ được nhà Minh khôi phục lại, Đại Nhạn Tháp, quảng
+                    trường Đại Yên Bắc – nơi có đài phun nước lớn nhất Châu Á. <br>
+                    - Tham quan chụp ảnh tại Công viên hoa Mẫu Đơn – loài quốc hoa của Trung Quốc <br>
+                    - Thăm quan Long Môn Thạch động - di sản văn hóa thế giới với hàng ngàn tượng Phật được điêu khắc
+                    trên vách núi <br>
+                    - Ghé thăm Thiếu Lâm Tự: nghe hướng dẫn viên địa phương giới thiệu về lịch sử hình thành và tồn tại
+                    đến ngày nay của Thiếu Lâm Tự, chứng kiến tận mắt cuộc sống và sinh hoạt hàng ngày của các môn sinh,
+                    tiểu tăng,… tham quan bảo tàng Kinh Các, điện Tây Vương, võ đường Thiên Phật Tự, Rừng Tháp. <br>
+                    - Thăm quan di chỉ thời Bắc Tống – Long Tỉnh, Đại Điện Long Đỉnh, Hoàng Cung Kim Loan Điện nhà Bắc
+                    Tống, Chùa Bao Công Tự, Phủ Khai Phong - nơi xưa kia Bao Đại Nhân đã từng xét xử bao vụ án nổi tiếng
+                    từ thường dân đến cả Thiên tử được tái hiện qua series phim Bao Thanh Thiên. <br>
+                    - Tham quan Bảo tàng Hà Nam (Bảo tàng toàn diện quốc gia) - đây là một bảo tàng trọng điểm quốc gia.
+                </p>
+                <div class="d-flex align-items-center mt-4">
+                    <img src="../assets/img/logo/logo-product.png" width="50px" height="50px" alt="">
+                    <h3 class="ms-2">Lịch Trình</h3>
+                </div>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button bg-body-secondary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                NGÀY 1: HÀ NỘI – QUẢNG CHÂU – TÂY AN (ăn tối)
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p class="lh-lg"><strong class="badge text-bg-warning">05h20</strong>: Xe đón đoàn tại
+                                    điểm hẹn đưa ra sân bay đáp chuyến bay đi Tây An, quá cảnh tại Quảng Châu. Các
+                                    chuyến bay <strong>CZ 372(0815 -1055) và CZ3207 (1310 – 1545)</strong>. Đến Tây An,
+                                    xe đón đoàn đi ăn tối sau đó về nhận phòng nghỉ khách sạn nghỉ đêm. Đoàn tự do khám
+                                    phá Thành phố Tây An về đêm.
+                                    <br>
+                                    <strong>Nghỉ đêm tại khách sạn ở Tây An.</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-body-secondary" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true"
+                                aria-controls="collapseTwo">
+                                NGÀY 2: LẠC DƯƠNG – ĐĂNG PHONG (ăn trưa, ăn tối)
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p class="lh-lg"><strong class="badge text-bg-warning">Sau bữa sáng</strong>, đoàn thăm
+                                    quan <strong>Long Môn Thạch động</strong> - di sản văn hóa thế giới với hàng ngàn
+                                    tượng Phật được điêu khắc trên vách núi; Quý khách khởi hành đi Trịnh Châu trên
+                                    đường ghé thăm <strong>Thiếu Lâm Tự</strong>: nghe hướng dẫn viên địa phương giới
+                                    thiệu về lịch sử hình thành và tồn tại đến ngày nay của Thiếu Lâm Tự, chứng kiến tận
+                                    mắt cuộc sống và sinh hoạt hàng ngày của các môn sinh, tiểu tăng,… tham quan
+                                    <strong>bảo tàng Kinh Các, điện Tây Vương, võ đường Thiên Phật Tự, Rừng
+                                        Tháp.</strong>
+                                    <br>
+                                    Đến Đăng Phong quý khách ăn tối tại nhà hàng địa phương và nghỉ đêm tại khách sạn.
+                                    <br>
+                                    <strong>Nghỉ đêm tại khách sạn ở Đăng Phong</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-body-secondary" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true"
+                                aria-controls="collapseThree">
+                                NGÀY 3: TRỊNH CHÂU –QUẢNG CHÂU – HÀ NỘI
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p><strong>Sáng</strong>: Sau khi ăn sáng đoàn trả phòng, lên xe di chuyển ra sân bay
+                                    đáp chuyến bay <strong>CZ 8685 (0850 – 1115) và CZ8315 (1335 – 1445)</strong> về Hà
+                                    Nội. Về tới sân bay Nội Bài, xe ô tô đón Quý khách về trung tâm thành phố kết thúc
+                                    chương trình.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <hr>
+                <h3>Các Tour Liên Quan</h3>
+                <div class="col-md-12 col-sm-12 mt-3">
+                    <div class="card">
+                        <img src="../assets/img/product/pro-2.jpg" class="card-img-top " alt="...">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">(HCM-ZH) Tour Trung Quốc: Trịnh Châu – Khai Phong – Lạc Dương
+                                7N6Đ</h5>
+                            <p class="card-text">Phương tiện: <i class="bi bi-airplane-fill"></i> <i
+                                    class="bi bi-car-front-fill"></i></p>
+                            <p class="card-text"><i class="bi bi-alarm"></i> 7 ngày 6 đêm</p>
+                            <p class="card-text"><i class="fa-solid fa-calendar-days"></i>Tháng 4,5,6</p>
+                            <div class="mt-auto d-flex justify-content-between">
+                                <h5 class="text-danger mt-1 fw-bold">19.990.000₫</h5>
+                                <a href="#" class="btn btn-primary">Xem Ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 mt-3">
+                    <div class="card">
+                        <img src="../assets/img/product/pro-3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">(HCM-ZH) Tour Trung Quốc: Trịnh Châu – Khai Phong – Lạc Dương
+                                7N6Đ</h5>
+                            <p class="card-text">Phương tiện: <i class="bi bi-airplane-fill"></i> <i
+                                    class="bi bi-car-front-fill"></i></p>
+                            <p class="card-text"><i class="bi bi-alarm"></i> 7 ngày 6 đêm</p>
+                            <p class="card-text"><i class="fa-solid fa-calendar-days"></i>Tháng 4,5,6</p>
+                            <div class="mt-auto d-flex justify-content-between">
+                                <h5 class="text-danger mt-1 fw-bold">19.990.000₫</h5>
+                                <a href="#" class="btn btn-primary">Xem Ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 mt-3">
+                    <div class="card">
+                        <img src="../assets/img/product/pro-4.webp" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">(HCM-ZH) Tour Trung Quốc: Trịnh Châu – Khai Phong – Lạc Dương
+                                7N6Đ</h5>
+                            <p class="card-text">Phương tiện: <i class="bi bi-airplane-fill"></i> <i
+                                    class="bi bi-car-front-fill"></i></p>
+                            <p class="card-text"><i class="bi bi-alarm"></i> 7 ngày 6 đêm</p>
+                            <p class="card-text"><i class="fa-solid fa-calendar-days"></i>Tháng 4,5,6</p>
+                            <div class="mt-auto d-flex justify-content-between">
+                                <h5 class="text-danger mt-1 fw-bold">19.990.000₫</h5>
+                                <a href="#" class="btn btn-primary">Xem Ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

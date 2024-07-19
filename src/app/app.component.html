@@ -1,0 +1,191 @@
+<header>
+  <nav class="navbar navbar-expand-lg bg-custom">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText1"
+        aria-controls="navbarText1" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars text-white"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText1">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="#"><i class="bi bi-envelope"></i>
+              phankhanhthy{{"@"}}gmail.com </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"><i class="bi bi-telephone-fill"></i> 0338064825</a>
+          </li>
+        </ul>
+        <span class="navbar-text">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-white" [routerLink]="['/about']"><i class="bi bi-book-fill pe-1"></i>Giới
+                Thiệu
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#"><i class="bi bi-calendar2-week pe-1"></i>Lịch
+                Khởi Hành
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" [routerLink]="['/contact']"><i
+                  class="bi bi-person-lines-fill pe-1"></i>Liên
+                Hệ </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" [routerLink]="['/login']"><i class="bi bi-box-arrow-in-right pe-1"></i>Đăng
+                Nhập
+              </a>
+            </li>
+          </ul>
+        </span>
+      </div>
+      <div id="cart" class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-black bg-opacity-10 px-2 py-1 ">
+        <a [routerLink]="['/cart']">
+            <i class="bi bi-bag fs-5  fw-bolder  text-white"></i>
+        </a>
+        <div class="">
+            <span id="amount-cart" class="text-dark  position-absolute top-0 start-75 translate-middle bg-white px-2 rounded-circle">
+             {{productService.getCartLength()}}
+            </span>
+        </div>
+    </div>
+    </div>
+  </nav>
+  <nav class="navbar navbar-expand-lg bg-body-secondary p-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="['/']"><img src="assets/img/logo/logo.png" height="40px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-custom" aria-current="page" [routerLink]="['/']">Trang chủ |</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-custom" href="" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Du Lịch Nước Ngoài
+            </a>
+            <ul class="dropdown-menu ">
+
+              <li><a class="dropdown-item" [routerLink]="['/category']"> Du Lịch Nhật Bản</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/category']"> Du Lịch Hàn Quốc</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/category']"> Du Lịch Đài Loan</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/category']"> Du Lịch Sin-Malay</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/category']"> Du Lịch Thái Lan</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/category']"> Du Lịch Bali</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/category']"> Du Lịch Sin-Indo-Malay</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/category']"> Du Lịch Dubai</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/category']"> Du Lịch Ấn Độ</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/category']"> Du Lịch Hồng Kông</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-custom" href="" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Tour Châu Âu
+            </a>
+            <ul class="dropdown-menu">
+
+              <li> <a class="dropdown-item text-custom" [routerLink]="['/category']"> DU LỊCH ANH QUỐC </a></li>
+              <li> <a class="dropdown-item text-custom" [routerLink]="['/category']"> DU LỊCH PHÁP </a></li>
+              <li> <a class="dropdown-item text-custom" [routerLink]="['/category']"> DU LỊCH THUỴ SĨ </a></li>
+              <li> <a class="dropdown-item text-custom" [routerLink]="['/category']"> DU LỊCH Ý </a></li>
+              <li> <a class="dropdown-item text-custom" [routerLink]="['/category']"> DU LỊCH ĐỨC </a></li>
+              <li> <a class="dropdown-item text-custom" [routerLink]="['/category']"> DU LỊCH BÌ </a></li>
+              <li> <a class="dropdown-item text-custom" [routerLink]="['/category']"> DU LỊCH HÀ LAN </a></li>
+              <li> <a class="dropdown-item text-custom" [routerLink]="['/category']"> DU LỊCH Luxembourg </a></li>
+              <li> <a class="dropdown-item text-custom" [routerLink]="['/category']"> DU LiCh Dan Mach </a></li>
+              <li> <a class="dropdown-item text-custom" [routerLink]="['/category']"> DULICH NA UY </a></li>
+              <li> <a class="dropdown-item text-custom" [routerLink]="['/category']"> DULICH PHAN LAN </a></li>
+              <li> <a class="dropdown-item text-custom" [routerLink]="['/category']"> DULICH THO NHI KY </a></li>
+              <li> <a class="dropdown-item text-custom" [routerLink]="['/category']"> DULICH THUY DIEN </a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-custom" href="" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Tour Việt Nam
+            </a>
+            <ul class="dropdown-menu">
+
+              <li> <a class="dropdown-item text-custom" [routerLink]="['/category']"><strong> Du Lịch Miền
+                    Bắc</strong> </a></li>
+              <li> <a class="dropdown-item text-custom" [routerLink]="['/category']"> Du Lịch Hạ Long </a></li>
+              <li> <a class="dropdown-item text-custom" [routerLink]="['/category']"> Du Lịch Tây Bắc </a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li> <a class="dropdown-item text-custom" [routerLink]="['/category']"><strong>Du Lịch Miền
+                    Trung</strong> </a></li>
+              <li> <a class="dropdown-item text-custom" [routerLink]="['/category']"> Du Lịch Đà Nẵng</a></li>
+              <li> <a class="dropdown-item text-custom" [routerLink]="['/category']"> Du Lịch Hội An</a></li>
+              <li> <a class="dropdown-item text-custom" [routerLink]="['/category']"> Du lịch Biển Đảo </a></li>
+              <li> <a class="dropdown-item text-custom" [routerLink]="['/category']">Du Lịch Phú Quốc </a></li>
+              <li> <a class="dropdown-item text-custom" [routerLink]="['/category']"> Du Lịch Nha Trang </a></li>
+              <li> <a class="dropdown-item text-custom" [routerLink]="['/category']"> Du Lịch Phan Thiết </a></li>
+
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex me-3" role="search">
+
+          <input class="form-control me-2" type="search" placeholder="Tìm kiếm" #inputsearch aria-label="Search">
+          <button class="btn btn-outline-primary" (click)="onSearch(inputsearch.value)" type="button">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+<router-outlet />
+<footer class="bg-body-secondary">
+  <div class="container pt-5 pb-3">
+    <div class="row">
+      <div class="col-md-4 col-sm-12 mt-2">
+        <h5>THÔNG TIN LIÊN HỆ</h5>
+        <p>CÔNG TY CỔ PHẦN DU LỊCH INTERTOUR VIỆT NAM</p>
+        <p><i class="fa-solid fa-location-dot text-success"></i> Trụ sở: 115 Nguyễn Thái Bình, phường Nguyễn
+          Thái Bình, Quận 1 , Tp.HCM</p>
+        <p><i class="fa-solid fa-location-dot text-success"></i> Chi Nhánh Miền Tây: 112B đường 3 Tháng 2,
+          phường Hưng Lợi, Quận Ninh Kiều, Tp. Cần Thơ.</p>
+        <p><i class="bi bi-telephone-fill text-success"></i> Phone: (028) 3822 9999</p>
+        <p><i class="fa-solid fa-fax text-success"></i> Fax: (028) 39142789</p>
+        <p><i class="fa-solid fa-envelope text-success"></i> Mail: welcome{{"@"}}intertour.com.vn</p>
+        <p>MS Doanh Nghiệp: 0305032648</p>
+        <p>GPLHQT: 79-350/2018/TCDL - GP LHQT</p>
+      </div>
+      <div class="col-md-4 col-sm-12 mt-2">
+        <h5>BẢN ĐỒ</h5>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15678.214185204044!2d106.68080016360538!3d10.768850036106063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3f8d1e176b%3A0x862a6dd7fc325ca1!2zxJAuIE5ndXnhu4VuIFRow6FpIELDrG5oLCBOZ3V54buFbiBUaMOhaSBCw6xuaCwgUXXhuq1uIDEsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1710884634140!5m2!1svi!2s"
+          width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="col-md-4 col-sm-12 mt-2">
+        <h5>ĐĂNG KÝ NHẬN ƯU ĐÃI</h5>
+        <p>Bạn mình ơi, cứ hàng tháng thì Intertour đều có những chương trình ưu đãi về giá dịch vụ cũng như các
+          quà tặng hấp dẫn nhằm tri ân khách hàng. Để có thể cập nhật kịp thời những thông tin này, vui lòng
+          nhập địa chỉ email của bạn vào ô dưới đây, để Intertour có thể gửi cho bạn những chương trình này
+          nhé! Thân, ^_^</p>
+        <form>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Nhập vào Email của ban !"
+              aria-label="Amount (to the nearest dollar)">
+            <span class="input-group-text bg-custom"><i class="fa-solid fa-paper-plane text-white"></i></span>
+          </div>
+        </form>
+        <p>Website <strong>intertour.vn</strong> đã thông báo với Bộ Công Thương tại Cổng thông tin Quản lý hoạt
+          động TMĐT</p>
+        <img src="img/certificate/dathongbao-510x193.png" width="100%">
+      </div>
+    </div>
+  </div>
+  <div class="bg-custom">
+    <div class="container text-center text-white pt-3 pb-3">
+      Copyright 2024 by Phan Khánh Thy
+    </div>
+  </div>
+</footer>

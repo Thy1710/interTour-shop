@@ -1,0 +1,156 @@
+<body class="wrapper bg-body-secondary">
+    <div class="container">
+        <div class="row pt-4">
+            <div class="col-md-6">
+                <h3>Du Lịch Nước Ngoài</h3>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Trang Chủ</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Du Lịch Nước Ngoài</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-md-6 d-flex justify-content-end align-items-center">
+                <h6 class="me-3">Hiển thị 1-14 của 170 kết quả</h6>
+                <select class="rounded p-1" [(ngModel)]="selectedSort" (change)="onSortChange()" name="" id="">
+                    <option value="asc">Thứ tự theo giá: thấp đến cao</option>
+                    <option value="desc">Thứ tự theo giá: cao đến đến thấp</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="accordion col-md-3 col-sm-12" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button bg-warning rounded" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            <strong>Nơi Khởi Hành</strong>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show list-group">
+                        <div class="accordion-body list-group-item ">
+                            <a href="" class="text-dark"><label for="">TP.HCM</label></a>
+                        </div>
+                        <div class="accordion-body list-group-item ">
+                            <a href="" class="text-dark"><label for="">Hà Nội</label></a>
+                        </div>
+                        <div class="accordion-body list-group-item ">
+                            <a href="" class="text-dark"><label for="">Đà Nẵng</label></a>
+                        </div>
+                        <div class="accordion-body list-group-item ">
+                            <a href="" class="text-dark"><label for="">Cần Thơ</label></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item mt-2">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-warning rounded" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            <strong>Nơi Đến</strong>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show list-group">
+                        <div class="accordion-body list-group-item">
+                            <a href="" class="text-dark"><label for="">BẮC ÂU</label></a>
+                        </div>
+                        <div class="accordion-body list-group-item">
+                            <a href="" class="text-dark"><label for="">BALI</label></a>
+                        </div>
+                        <div class="accordion-body list-group-item">
+                            <a href="" class="text-dark"><label for="">BỈ</label></a>
+                        </div>
+                        <div class="accordion-body list-group-item">
+                            <a href="" class="text-dark"><label for="">CAMBODIA</label></a>
+                        </div>
+                        <div class="accordion-body list-group-item">
+                            <a href="" class="text-dark"><label for="">CANADA</label></a>
+                        </div>
+                        <div class="accordion-body list-group-item">
+                            <a href="" class="text-dark"><label for="">CHÂU ÂU</label></a>
+                        </div>
+                        <div class="accordion-body list-group-item">
+                            <a href="" class="text-dark"><label for="">ĐAN MẠCH</label></a>
+                        </div>
+                        <div class="accordion-body list-group-item">
+                            <a href="" class="text-dark"><label for="">ĐỨC</label></a>
+                        </div>
+                        <div class="accordion-body list-group-item">
+                            <a href="" class="text-dark"><label for="">HÀ LAN</label></a>
+                        </div>
+                        <div class="accordion-body list-group-item">
+                            <a href="" class="text-dark"><label for="">MALAYSIA</label></a>
+                        </div>
+                        <div class="accordion-body list-group-item">
+                            <a href="" class="text-dark"><label for="">PHÁP</label></a>
+                        </div>
+                        <div class="accordion-body list-group-item">
+                            <a href="" class="text-dark"><label for="">PHẦN LAN</label></a>
+                        </div>
+                        <div class="accordion-body list-group-item">
+                            <a href="" class="text-dark"><label for="">PHUKET</label></a>
+                        </div>
+                        <div class="accordion-body list-group-item">
+                            <a href="" class="text-dark"><label for="">SINGAPORE</label></a>
+                        </div>
+                        <div class="accordion-body list-group-item">
+                            <a href="" class="text-dark"><label for="">SYDNY</label></a>
+                        </div>
+                        <div class="accordion-body list-group-item">
+                            <a href="" class="text-dark"><label for="">THỔ NHĨ KỲ</label></a>
+                        </div>
+                        <div class="accordion-body list-group-item">
+                            <a href="" class="text-dark"><label for="">THỤY ĐIỂN</label></a>
+                        </div>
+                        <div class="accordion-body list-group-item">
+                            <a href="" class="text-dark"><label for="">THỤY SĨ</label></a>
+                        </div>
+                        <div class="accordion-body list-group-item">
+                            <a href="" class="text-dark"><label for="">TRUNG QUỐC</label></a>
+                        </div>
+                        <div class="accordion-body list-group-item">
+                            <a href="" class="text-dark"><label for="">ÚC</label></a>
+                        </div>
+                        <div class="accordion-body list-group-item">
+                            <a href="" class="text-dark"><label for="">VANCOUVER</label></a>
+                        </div>
+                        <div class="accordion-body list-group-item">
+                            <a href="" class="text-dark"><label for="">Ý</label></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-12">
+                <h3 class="bg-white p-2">Chùm Tour Du Lịch Nước Ngoài</h3>
+                <div class="container">
+                    <div class="row bg-white">
+                        <div class="col-sm-12 col-md-6 col-lg-4 mb-3 " *ngFor="let p of productsTournuocngoai ">
+                            <div class="card" style="height: 410px;">
+                                <img src="./assets/img/product/{{p.img}}.jpg"  class="card-img-top" alt="...">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-text">{{p.name}}</h5>
+                                    <p class="card-text">Phương tiện: {{p.vehicle}}</p>
+                                    <p class="card-text"><i class="bi bi-alarm"></i> {{p.during}}</p>
+                                    <div class="mt-auto d-flex justify-content-between">
+                                        <h5 class="text-danger mt-1 fw-bold">{{ p.price | number }}₫</h5>
+                                        <a [routerLink] = "['/detail',p.id]" class="btn btn-primary">Xem Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination ">
+                              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                              <li class="page-item"><a class="page-link" href="#">1</a></li>
+                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                            </ul>
+                          </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
